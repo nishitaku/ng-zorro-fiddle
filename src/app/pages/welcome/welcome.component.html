@@ -1,0 +1,7 @@
+<nz-date-picker
+  nzShowTime
+  nzFormat="yyyy-MM-dd HH:mm:ss"
+  [(ngModel)]="date"
+  (ngModelChange)="onChange($event)"
+  (nzOnCalendarChange)="onChange2($event)"
+></nz-date-picker>
