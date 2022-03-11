@@ -1,7 +1,21 @@
-<nz-date-picker
-  nzShowTime
-  nzFormat="yyyy-MM-dd HH:mm:ss"
-  [(ngModel)]="date"
-  (ngModelChange)="onChange($event)"
-  (nzOnCalendarChange)="onChange2($event)"
-></nz-date-picker>
+<div>
+  <button nz-button (click)="showModal = true">
+    <span>Show Modal</span>
+  </button>
+</div>
+<nz-modal
+  [(nzVisible)]="showModal"
+  nzTitle="Sample Modal"
+  (nzOnCancel)="handleCancel()"
+  (nzOnOk)="handleOk()"
+  [nzBodyStyle]="{ height: '1000px' }"
+>
+  <ng-container *nzModalContent>
+    <nz-date-picker
+      nzShowTime
+      nzFormat="yyyy-MM-dd HH:mm:ss"
+      [(ngModel)]="date"
+      (ngModelChange)="onChange($event)"
+    ></nz-date-picker>
+  </ng-container>
+</nz-modal>

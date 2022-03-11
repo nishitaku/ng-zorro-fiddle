@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WelcomeComponent implements OnInit {
   date: Date = new Date();
+  showModal = false;
 
   constructor() {}
 
@@ -16,7 +17,11 @@ export class WelcomeComponent implements OnInit {
     console.log('Selected Time: ', this.date);
   }
 
-  onChange2(result: (Date | null)[]): void {
-    console.log('Selected Time: ', this.date);
+  handleOk(): void {
+    this.showModal = false;
+  }
+
+  handleCancel(): void {
+    this.showModal = false;
   }
 }

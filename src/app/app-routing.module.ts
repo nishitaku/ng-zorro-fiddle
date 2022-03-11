@@ -8,6 +8,11 @@ const routes: Routes = [
     loadChildren: () =>
       import('./pages/welcome/welcome.module').then((m) => m.WelcomeModule),
   },
+  {
+    path: 'monitor',
+    loadChildren: () =>
+      import('./pages/monitor/monitor.module').then((m) => m.MonitorModule),
+  },
 ];
 
 @NgModule({
